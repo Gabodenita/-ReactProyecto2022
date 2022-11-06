@@ -1,16 +1,26 @@
-import Button from "./button";
-import CartWidget from "./CartWidget";
+import Button from "./Button/Button";
+import CartWidget from "./CartWidget/CartWidget";
+import FlexWrapper from "./FlexWrapper/FlexWrapper";
 
 function NavBar(){
 
     return(
         <>
             <h3>Mi tienda de QUEEN</h3>
-            <Button text="Discografía"/>
-            <Button text="Merchandising"/>
-            <Button text="Log In"/>
-            <CartWidget/>
+            <FlexWrapper>
+                <Button color="red">
+                    Discografía
+                </Button>
+                <Button>
+                    Merchandising
+                </Button>
+                <Button color="blue"> 
+                    Log In
+                </Button>
+                <CartWidget/>
+            </FlexWrapper>
+            
         </>
     )
 }
-export default NavBar;
+export default NavBar; 

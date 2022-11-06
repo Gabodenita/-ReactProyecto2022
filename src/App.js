@@ -1,16 +1,15 @@
-import './App.css';
+import "./App.css";
 import NavBar from './components/NavBar';
-
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
 
-  let titulo= "Bienvenidos a la tienda de QUEEN"
-  return (
+    return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
       </header>
-      <h1>{titulo}</h1>
+      <ItemListContainer/>
     </div>
   );
 }
