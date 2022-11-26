@@ -557,14 +557,30 @@
         return new Promise((resolve) => {
           setTimeout(() => {
             resolve(itemsDB);
-          }, 2000);
+          }, 500);
         });
-      }
-      
-      export function getSingleItemFromAPI() {
+    }
+    
+    export function getSingleItemFromAPI(idParams) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let itemRequested = itemsDB.find((item) => item.id === Number(idParams));
+                if(itemRequested){
+                    resolve(itemRequested);
+                }else{
+                    reject(new Error("El artículo no existe"));
+                }
+            }, 500);
+        });
+    }
+
+    export function getSingleItemFromAPIByCategory(categoryid) { 
         return new Promise((resolve) => {
-          setTimeout(() => {
-            resolve(itemsDB[8]);
-          }, 2000);
+            setTimeout(() => {
+                let itemRequested = itemsDB.filter((item) => item.category === categoryid);
+                resolve(itemRequested);
+            }, 500);
         });
-      }
+    }
+
+    // 1:22

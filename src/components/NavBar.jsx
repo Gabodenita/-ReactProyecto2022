@@ -1,26 +1,15 @@
-import Button from "./Button/Button";
-import CartWidget from "./CartWidget/CartWidget";
-import FlexWrapper from "./FlexWrapper/FlexWrapper";
+import { Link } from "react-router-dom"
+// import CartWidget from "./CartWidget/CartWidget";
+
+// import FlexWrapper from "./FlexWrapper/FlexWrapper";
 
 function NavBar(){
-
     return(
-        <>
-            <h3>Mi tienda de QUEEN</h3>
-            <FlexWrapper>
-                <Button color="red">
-                    Discografía
-                </Button>
-                <Button>
-                    Merchandising
-                </Button>
-                <Button color="blue"> 
-                    Log In
-                </Button>
-                <CartWidget/>
-            </FlexWrapper>
-            
-        </>
+        <nav className="nav_menu">
+            <Link to ="/"><h3>MI e-COMERCE</h3></Link>
+            <Link to ="/detalle">Detalle</Link>
+            <Link to ="/CartWidget"><img src= "./public/img/107831.jpg" alt="carrito"></img></Link>
+        </nav>
     )
 }
 export default NavBar; 
