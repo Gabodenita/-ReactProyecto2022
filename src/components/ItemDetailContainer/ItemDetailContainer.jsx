@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { getSingleItemFromAPI } from "../../mockService/mockService";
 import { useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
 
-  let params = useParams();
-  let id = params.id;
+  let id = useParams().id;
 
   useEffect(() => {
-    getSingleItemFromAPI(id).then((itemsDB) => {
-      setProduct(itemsDB);
-    }).catch( error => alert(error) );
+    getSingleItemFromAPI(id)
+      .then((itemsDB) => {
+        setProduct(itemsDB);
+      })
+      .catch((error) => alert(error));
   }, [id]);
 
-  return (
-    <div className="card-detail">
-      <div className="card-detail-img">
-        <img src={product.thumbnail} alt="Product img" />
-      </div> 
-      <div className="card-detail">
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <h4 className="priceTag">$ {product.price}</h4>
-      </div>
-    </div>
-  );
+  return <ItemDetail product={product} />;
 }
 
 export default ItemDetailContainer;

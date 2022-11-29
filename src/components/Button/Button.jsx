@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
+// import React, {useState} from 'react'
 import "./button.css";
 
 function Button(props) {
-  const [colorState, setColorState] = useState({ backgroundColor: props.color });
+  // const [colorState, setColorState] = useState({ backgroundColor: props.color });
 
-  function handleClick(){
-    setColorState ({ backgroundColor: "#cc76cc" });
-  }
+  // function handleClick(){
+  //   setColorState ({ backgroundColor: "#cc76cc" });
+  // }
 
   return (
     
-    <button onClick={handleClick} style={colorState} className= "btn">
+    <button onClick={props.onClick} className= "btn">
         {props.children}
     </button>
   );

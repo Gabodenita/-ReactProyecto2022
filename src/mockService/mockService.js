@@ -574,7 +574,7 @@
         });
     }
 
-    export function getSingleItemFromAPIByCategory(categoryid) { 
+    export function getItemFromAPIByCategory(categoryid) { 
         return new Promise((resolve) => {
             setTimeout(() => {
                 let itemRequested = itemsDB.filter((item) => item.category === categoryid);
@@ -583,4 +583,4 @@
         });
     }
 
-    // 1:22
+    
