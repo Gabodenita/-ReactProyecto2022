@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { createBuyOrderFirestoreWithStock } from "../../services/firebase";
 import cartContext from "../../storage/CartContext";
 import Button from "../Button/Button";
-import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import BuyForm from "./BuyForm";
+import Swal from "sweetalert2";
 
 function CartView() {
   const { cart, clear, removeItem, totalPriceInCart } = useContext(cartContext);
@@ -29,7 +29,9 @@ function CartView() {
         icon: "success",
       });
     });
+   
   }
+
 
   return (
     <div>

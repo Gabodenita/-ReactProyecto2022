@@ -33,7 +33,7 @@ function ItemListContainer() {
     }
   }, [categoryid]);
 
-    // early return - retorn anticipado
+    // early return - retorno anticipado
     if (isLoading)
     return (
       <FlexWrapper>

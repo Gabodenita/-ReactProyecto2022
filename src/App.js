@@ -4,12 +4,12 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { testDatabase } from "./services/firebase";
+// import { exportItemsToFirestore, testDatabase } from "./services/firebase";
 import { CartContextProvider } from "./storage/CartContext";
 import CartView from "./components/CartView/CartView";
 
 
-testDatabase();
+// testDatabase();
 function App() {
   return (
     <div className="App">
