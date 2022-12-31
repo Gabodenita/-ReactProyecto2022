@@ -26,12 +26,7 @@ export function CartContextProvider(props) {
       newCart.push(itemData);
       setCart(newCart);
     }
-    /* else {
-      setCart((newCart) => {
-        newCart.push(itemData);
-        return newCart;
-      });
-    } */
+   
   }
 
   function totalItemsInCart() {
