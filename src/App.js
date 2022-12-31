@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       {/* 5. Importamos y renderizamos el Provider */}
-      <h1> MI E-COMERS</h1>
+      <h1> MI E-COMMERCE</h1>
       <CartContextProvider>
         <BrowserRouter>
           <NavBar />
