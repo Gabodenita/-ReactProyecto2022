@@ -1,4 +1,4 @@
-# Poryecto E-Comerce
+# Poryecto E-Commerce
 ## _Curso de React - Coderhouse_
 En este curso generamos una Single Page Application, emulando a Mercado Libre con React.
 
